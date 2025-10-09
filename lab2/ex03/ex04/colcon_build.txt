@@ -1,0 +1,4 @@
+Starting >>> mypkg
+Finished <<< mypkg [0.53s]
+
+Summary: 1 package finished [0.67s]
