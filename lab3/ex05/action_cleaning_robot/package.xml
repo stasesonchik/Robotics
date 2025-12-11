@@ -4,7 +4,7 @@
   <name>action_cleaning_robot</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="y.komarevtsev@g.nsu.ru">yan</maintainer>
+  <maintainer email="s.malyarchuk@g.nsu.ru">stas</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
