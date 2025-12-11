@@ -1,0 +1,2 @@
+ros2 run service_full_name service
+ros2 run service_full_name client K Y P
