@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo>
+        <plugin
+            filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+        </plugin>
+
+        <plugin
+            filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive">
+            <left_joint>base_to_left_wheel</left_joint>
+            <right_joint>base_to_right_wheel</right_joint>
+            <child_frame_id>robot/base_link</child_frame_id>
+            <wheel_separation>1.0</wheel_separation>
+            <wheel_radius>0.5</wheel_radius>
+            <odom_publish_frequency>50</odom_publish_frequency>
+        </plugin>
+
+        <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+            <joint_name>left_arm_shoulder_joint</joint_name>
+            <topic>/robot/left_shoulder_cmd</topic>
+            <p_gain>100</p_gain>
+            <i_gain>1</i_gain>
+            <d_gain>10</d_gain>
+        </plugin>
+
+        <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+            <joint_name>left_arm_elbow_joint</joint_name>
+            <topic>/robot/left_elbow_cmd</topic>
+            <p_gain>100</p_gain>
+            <i_gain>1</i_gain>
+            <d_gain>10</d_gain>
+        </plugin>
+
+        <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+            <joint_name>right_arm_shoulder_joint</joint_name>
+            <topic>/robot/right_shoulder_cmd</topic>
+            <p_gain>100</p_gain>
+            <i_gain>1</i_gain>
+            <d_gain>10</d_gain>
+        </plugin>
+
+        <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+            <joint_name>right_arm_elbow_joint</joint_name>
+            <topic>/robot/right_elbow_cmd</topic>
+            <p_gain>100</p_gain>
+            <i_gain>1</i_gain>
+            <d_gain>10</d_gain>
+        </plugin>
+    </gazebo>
+    
+</robot>
